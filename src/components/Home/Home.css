@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(10 , 0, 0, 0.4);
+    /* Обрезает лишнее */
+}
+
+.background-clip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* Заполняет экран без искажений */
+    z-index: -1;
+    /* Отправляем видео на задний план */
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 95px;
+}
+
+.btnShop  {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px 10px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btnShop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: orange;
+    transition: width 0.5s ease-in-out;
+}
+
+.btnShop:hover::before {
+    width: 100%;
+}
+
+.btnShop:hover {
+    color: black; /* Меняем цвет текста при заполнении */
+}
+
+.btnShop::before {
+    z-index: -1; /* Чтобы заливка была под текстом */
+}
+
+.btnShop {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1440px) {
+    h1 {
+        font-size: 40px; /* Уменьшаем заголовок */
+    }
+
+    .btnShop {
+        font-size: 24px; /* Делаем кнопку компактнее */
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    .content {
+        position: relative;
+        text-align: center;
+        color: white;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 1640px){
+    h1 {
+        font-size: 34px; /* Уменьшаем заголовок */
+    }
+
+    .btnShop {
+        font-size: 19px; /* Делаем кнопку компактнее */
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

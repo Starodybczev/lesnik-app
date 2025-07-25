@@ -1,0 +1,266 @@
+.block {
+    width: 320px;
+    height: 100vh;
+    background-color: rgb(38, 44, 33);
+    position: fixed; /* Фиксированное боковое меню */
+    right: 0;
+    top: 0;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.image{
+    font-size: 50px;
+}
+
+.BurgerMenu{
+   width: 70px;
+   display: none;
+   background-color: white;
+   border-radius: 50px;
+   border: 1px solid white;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto; /* Прокручиваем только содержимое */
+    padding: 0 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 30px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.imageShop {
+    width: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.imageShop:hover {
+    box-shadow: 2px 2px 2px 4px black;
+}
+
+.imageMenu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.imageSource {
+    width: 30px;
+    border-radius: 50%;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    flex-direction: column;
+    margin-top: auto; /* Футер прижимается вниз */
+    padding-bottom: 20px;
+}
+
+.imageLogo{
+   margin-bottom: 20px;
+    width: 250px;
+ 
+}
+
+
+.burgerMenu{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    font-size: 60px;
+    top: 0;
+    background-color: rgb(38, 44, 33);
+    padding: 20px 20px;
+    z-index: 20;
+    animation: move 0.3s ease-out;
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        flex-direction: column;
+        margin-top: auto; /* Футер прижимается вниз */
+        padding-bottom: 20px;
+    }
+}
+
+.imageShopMob{
+    display: none;
+}
+
+
+@keyframes move {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.pointerAgow{
+    width: 50px;
+    display: none;
+  
+}
+
+@media (max-width: 1440px) {
+    article {
+        padding: 0 20px; /* Уменьшаем отступы внутри */
+    }
+
+    a {
+        font-size: 26px; /* Уменьшаем размер шрифта ссылок */
+    }
+
+    .imageShop {
+        width: 35px; /* Уменьшаем иконку корзины */
+    }
+
+    .imageSource {
+        width: 25px; /* Делаем иконки соцсетей меньше */
+    }
+
+    .imageLogo {
+        width: 200px; /* Уменьшаем логотип */
+    }
+    .block{
+        width: 250px;
+    }
+}
+
+@media (max-width: 1200px){
+    .block {
+       display: none;
+       
+    }
+
+    .BurgerMenu{
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 120px;
+        right: 55px;
+        position: fixed;
+        z-index: 10;
+       
+     }
+
+     .burgerMenu{
+        display: block;
+        display: flex;
+        gap: 100px;
+     }
+
+    .pointerAgow{
+        display: block;
+       
+        
+    }
+    
+}
+
+
+@media (max-width: 785px)  {
+    .BurgerMenu{
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 120px;
+        right: 45px;
+        position: fixed;
+        z-index: 10;
+       
+     }
+}
+
+@media (max-width: 535px){
+    .BurgerMenu{
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        position: fixed;
+        z-index: 10;
+       
+     }
+}
+
+@media (max-width: 390px) and (max-height: 844px){
+    .BurgerMenu{
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        position: fixed;
+        z-index: 10;
+       
+     }
+}
+
+@media (max-width: 499px){
+    .BurgerMenu{
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 50px;
+        right: 40px;
+        position: fixed;
+        z-index: 10;
+       
+     }
+}
+
+@media (max-width: 480px){
+    .BurgerMenu{
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 50px;
+        right: 60px;
+        position: fixed;
+        z-index: 10;
+       
+     }
+}

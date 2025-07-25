@@ -1,0 +1,213 @@
+.trash {
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 1000px;
+    display: flex;
+    gap: 20px;
+    background-color: rgb(50, 113, 50);
+    align-items: center;
+    color: white;
+}
+
+.blockTrash {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    animation: revors 1s;
+    gap: 10px;
+    background-color: #5c4f1a;
+    height: 100vh;
+
+}
+
+.summSpan {
+    font-size: 20px;
+
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dectionary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnMinus,
+.btnPlus {
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnMinus {
+    padding: 10px 12px;
+}
+
+.image {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.h_items {
+    width: 200px;
+}
+
+.totalSum {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: auto;
+}
+
+
+
+.btnBuy {
+    z-index: 10;
+    position: relative;
+    background-color: #ffcc00;
+    /* Яркий желтый цвет, гармонирующий с DeWalt */
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    /* Сделал плавнее */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer !important;
+
+    &:hover {
+        background-color: #ffb700;
+        /* Темнее при наведении */
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+h2 {
+    color: white;
+}
+
+.emptyCart {
+    text-align: center;
+
+}
+
+.emptyCart{
+    height: 100vh;
+}
+
+.btnRemove {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(235, 76, 76);
+    }
+}
+
+@keyframes revors {
+    from {
+        transform: translate(-200px, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+@media(max-width: 1600px) {
+    .trash {
+        width: 800px;
+        gap: 10px;
+        padding: 10px 30px;
+    }
+    .emptyCart{
+        height: 100vh;
+    }
+}
+
+@media(max-width: 910px) {
+    .trash {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .blockTrash {
+        padding: 200px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: revors 1s;
+        gap: 10px;
+        background-color: #5c4f1a;
+        height: auto;
+    
+    }
+    .emptyCart{
+        height: 100vh;
+    }
+   
+}
+
+@media(max-width: 390px) {
+    .blockTrash {
+        padding: 20px 10px;
+    }
+
+    .trash {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        width: 250px;
+    }
+
+    .blockTrash {
+        padding: 100px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: revors 1s;
+        gap: 10px;
+        background-color: #5c4f1a;
+        height: auto;
+    
+    }
+
+    .emptyCart{
+        height: 100vh;
+    }
+
+    .totalSum {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+}
