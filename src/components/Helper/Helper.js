@@ -3,11 +3,13 @@ import "./Helper.css"
 
 export default function Helper() {
 
+    // Состояния для хранения данных формы
     const [name, setName] = useState("");
     const [lastName, setLastName] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
 
+    // Функция для обработки отправки формы
     const addUser = (event) => {
         event.preventDefault();
         const userData = {
