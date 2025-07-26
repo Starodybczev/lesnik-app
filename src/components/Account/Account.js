@@ -3,8 +3,12 @@ import { MdModeNight, MdLightMode } from "react-icons/md";
 import "./Account.css"
 
 export default function Account() {
+  // Состояние для хранения темы (день/ночь)
   const [theme, setTheme] = useState(false);
 
+
+
+  // Функция для смены темы
   const ChangeTheme = () => {
     setTheme(!theme);
   };
